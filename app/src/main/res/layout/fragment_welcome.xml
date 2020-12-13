@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout style="@style/Match">
+
+        <include layout="@layout/guideline" />
+
+        <TextView
+            android:id="@+id/welcomeTitle"
+            style="@style/WelcomeTitle"
+            app:layout_constraintBottom_toBottomOf="@id/top"
+            app:layout_constraintEnd_toEndOf="@id/right"
+            app:layout_constraintStart_toStartOf="@id/left"
+            app:layout_constraintTop_toBottomOf="@id/top" />
+
+        <ImageView
+            android:id="@+id/logo"
+            style="@style/WelcomeLogo"
+            app:layout_constraintDimensionRatio="h,1:1"
+            app:layout_constraintEnd_toEndOf="@id/right"
+            app:layout_constraintStart_toStartOf="@id/left"
+            app:layout_constraintTop_toBottomOf="@id/welcomeTitle"
+            app:srcCompat="@drawable/ic_high_heel" />
+
+        <TextView
+            android:id="@+id/welcomeDescription"
+            style="@style/WelcomeDescription"
+            app:layout_constraintEnd_toEndOf="@id/right"
+            app:layout_constraintStart_toStartOf="@id/left"
+            app:layout_constraintTop_toBottomOf="@id/logo" />
+
+        <Button
+            android:id="@+id/welcomeBtn"
+            style="@style/ActionButton"
+            android:text="@string/welcome_button"
+            app:layout_constraintBottom_toBottomOf="@id/bottom"
+            app:layout_constraintEnd_toEndOf="@id/right"
+            app:layout_constraintStart_toStartOf="@id/left"
+            app:layout_constraintTop_toTopOf="@id/bottom" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

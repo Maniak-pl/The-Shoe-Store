@@ -36,7 +36,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         viewModel.loginFormState.observe(viewLifecycleOwner, Observer {
             val loginState = it ?: return@Observer
 
-            binding.login.isEnabled = loginState.isDataValid
+            binding.loginBtn.isEnabled = loginState.isDataValid
 
             if (loginState.usernameError != null) {
                 binding.username.error = getString(loginState.usernameError)
@@ -53,9 +53,9 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             }
             if (result.success != null) {
                 updateUiWithUser(result.success)
+                clearForm()
                 findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
-                // finish login
-
+                viewModel.onLoginFinish()
             }
         })
 
@@ -85,7 +85,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                 false
             }
 
-            binding.login.setOnClickListener {
+            binding.loginBtn.setOnClickListener {
                 binding.loading.visible()
                 viewModel.login(binding.username.text.toString(), binding.password.text.toString())
             }
@@ -94,6 +94,10 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         return binding.root
     }
 
+    private fun clearForm() {
+        binding.username.text = null
+        binding.password.text = null
+    }
 
     private fun updateUiWithUser(model: LoggedInUserView) {
         val welcome = getString(R.string.welcome)
