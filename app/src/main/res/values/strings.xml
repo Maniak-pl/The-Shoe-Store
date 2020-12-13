@@ -13,6 +13,10 @@
 
     <!-- Welcome Fragment -->
     <string name="welcome_title">The Shoe Store</string>
-    <string name="welcome_description">Online store with shoes at absurdly low prices, check out a wide selection of shoes.</string>
+    <string name="welcome_description">Your shoe warehouse for better store management.</string>
     <string name="welcome_button">Let\'s go</string>
+
+    <string name="instruction_title">Instructions</string>
+    <string name="instruction_description">The Shoe Store is the perfect warehouse and inventory manager. We can add, view and check the details of goods.</string>
+    <string name="instruction_button">Start now</string>
 </resources>
