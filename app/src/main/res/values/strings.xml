@@ -36,4 +36,10 @@
     <string name="cancel">Cancel</string>
     <string name="save">Save</string>
 
+    <!-- ShoeView -->
+    <string name="name_shoe">"Name: %1$s"</string>
+    <string name="company_shoe">"Company: %1$s"</string>
+    <string name="size_shoe">"Size: %1$f"</string>
+    <string name="description_shoe">"Description: %1$s"</string>
+
 </resources>

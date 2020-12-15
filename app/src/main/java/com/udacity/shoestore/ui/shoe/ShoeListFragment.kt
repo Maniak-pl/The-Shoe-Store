@@ -11,6 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
+import com.udacity.shoestore.util.views.ShoeView
 
 class ShoeListFragment : Fragment() {
 
@@ -25,7 +26,9 @@ class ShoeListFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_list, container, false)
 
         viewModel.shoeList.observe(viewLifecycleOwner, Observer {
-            // ToDo show shoe item
+            it.forEach {
+                binding.list.addView(ShoeView(requireContext()).apply { setData(it) })
+            }
         })
 
         binding.shoeListAddBtn.setOnClickListener {

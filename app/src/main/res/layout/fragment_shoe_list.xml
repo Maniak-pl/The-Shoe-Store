@@ -24,6 +24,7 @@
             app:layout_constraintTop_toBottomOf="@id/shoeListTitle">
 
             <LinearLayout
+                android:id="@+id/list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
