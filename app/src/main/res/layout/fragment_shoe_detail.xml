@@ -7,13 +7,91 @@
         <include layout="@layout/guideline" />
 
         <TextView
-            android:id="@+id/shoeListTitle"
+            android:id="@+id/shoeDetailTitle"
             style="@style/Title"
             android:layout_marginTop="10dp"
             android:text="@string/shoe_detail_title"
             app:layout_constraintEnd_toEndOf="@id/right"
             app:layout_constraintStart_toStartOf="@id/left"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/ShoeLabel"
+            android:layout_marginTop="18dp"
+            android:text="@string/name"
+            app:layout_constraintEnd_toEndOf="@id/right"
+            app:layout_constraintStart_toStartOf="@id/left"
+            app:layout_constraintTop_toBottomOf="@id/shoeDetailTitle" />
+
+        <EditText
+            android:id="@+id/nameInput"
+            style="@style/EmptyWrap"
+            app:layout_constraintEnd_toEndOf="@id/right"
+            app:layout_constraintStart_toStartOf="@id/left"
+            app:layout_constraintTop_toBottomOf="@id/name" />
+
+        <TextView
+            android:id="@+id/company"
+            style="@style/ShoeLabel"
+            android:text="@string/company"
+            app:layout_constraintEnd_toEndOf="@id/right"
+            app:layout_constraintStart_toStartOf="@id/left"
+            app:layout_constraintTop_toBottomOf="@id/nameInput" />
+
+        <EditText
+            android:id="@+id/companyInput"
+            style="@style/EmptyWrap"
+            app:layout_constraintEnd_toEndOf="@id/right"
+            app:layout_constraintStart_toStartOf="@id/left"
+            app:layout_constraintTop_toBottomOf="@id/company" />
+
+        <TextView
+            android:id="@+id/size"
+            style="@style/ShoeLabel"
+            android:text="@string/size"
+            app:layout_constraintEnd_toEndOf="@id/right"
+            app:layout_constraintStart_toStartOf="@id/left"
+            app:layout_constraintTop_toBottomOf="@id/companyInput" />
+
+        <EditText
+            android:id="@+id/sizeInput"
+            style="@style/EmptyWrap"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="@id/right"
+            app:layout_constraintStart_toStartOf="@id/left"
+            app:layout_constraintTop_toBottomOf="@id/size" />
+
+        <TextView
+            android:id="@+id/description"
+            style="@style/ShoeLabel"
+            android:text="@string/description"
+            app:layout_constraintEnd_toEndOf="@id/right"
+            app:layout_constraintStart_toStartOf="@id/left"
+            app:layout_constraintTop_toBottomOf="@id/sizeInput" />
+
+        <EditText
+            android:id="@+id/descriptionInput"
+            style="@style/EmptyWrap"
+            app:layout_constraintEnd_toEndOf="@id/right"
+            app:layout_constraintStart_toStartOf="@id/left"
+            app:layout_constraintTop_toBottomOf="@id/description" />
+
+        <Button
+            android:id="@+id/cancelBtn"
+            style="@style/ActionButton"
+            android:text="@string/cancel"
+            app:layout_constraintEnd_toStartOf="@id/saveBtn"
+            app:layout_constraintStart_toStartOf="@id/left"
+            app:layout_constraintTop_toBottomOf="@id/descriptionInput" />
+
+        <Button
+            android:id="@+id/saveBtn"
+            style="@style/ActionButton"
+            android:text="@string/save"
+            app:layout_constraintEnd_toEndOf="@id/right"
+            app:layout_constraintStart_toEndOf="@id/cancelBtn"
+            app:layout_constraintTop_toBottomOf="@id/descriptionInput" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
