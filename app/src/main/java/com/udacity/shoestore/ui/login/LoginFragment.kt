@@ -1,9 +1,7 @@
 package com.udacity.shoestore.ui.login
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.view.inputmethod.EditorInfo
 import androidx.annotation.StringRes
 import androidx.databinding.DataBindingUtil
@@ -91,6 +89,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             }
         }
 
+        setHasOptionsMenu(true)
         return binding.root
     }
 
@@ -107,5 +106,10 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
     private fun showLoginFailed(@StringRes errorString: Int) {
         toast(errorString)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        menu.clear()
     }
 }

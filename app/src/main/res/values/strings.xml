@@ -1,5 +1,8 @@
 <resources>
-    <string name="app_name">ShoeStore</string>
+    <string name="app_name">The Shoe Store</string>
+
+    <!-- Menu -->
+    <string name="logout">Logout</string>
 
     <!-- LoginFragment -->
     <string name="prompt_email">Email</string>
