@@ -16,7 +16,15 @@
     <string name="welcome_description">Your shoe warehouse for better store management.</string>
     <string name="welcome_button">Let\'s go</string>
 
+    <!-- InstructionsFragment -->
     <string name="instruction_title">Instructions</string>
     <string name="instruction_description">The Shoe Store is the perfect warehouse and inventory manager. We can add, view and check the details of goods.</string>
     <string name="instruction_button">Start now</string>
+
+    <!-- ShoeListFragment -->
+    <string name="shoe_list_title">Shoe List</string>
+
+    <!-- ShoeDetailFragment -->
+    <string name="shoe_detail_title">Shoe Detail</string>
+
 </resources>
