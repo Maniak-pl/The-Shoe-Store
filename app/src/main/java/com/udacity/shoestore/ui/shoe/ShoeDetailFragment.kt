@@ -24,9 +24,10 @@ class ShoeDetailFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_detail, container, false)
 
         binding.saveBtn.setOnClickListener {
+            val size = sizeInput.text.toString()
             viewModel.addShoe(
                 nameInput.text.toString(),
-                sizeInput.text.toString().toDouble(),
+                if(size.isNotEmpty()) size.toDouble() else 0.0,
                 companyInput.text.toString(),
                 descriptionInput.text.toString()
             )

@@ -37,7 +37,6 @@
         android:id="@+id/size"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Size: "
         app:layout_constraintTop_toBottomOf="@id/company"
         app:layout_constraintStart_toStartOf="@id/name"/>
     
@@ -46,7 +45,6 @@
         android:layout_width="@dimen/empty"
         android:layout_height="wrap_content"
         android:layout_margin="14dp"
-        android:text="dskfjslsldfkjsaldkfjdlsfkajdlfjldksjflasdjdlkfjasldkjdkjfalsdjfdklsjfaldkjflksdjflksdkfjaldfj"
         app:layout_constraintTop_toBottomOf="@id/image"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
