@@ -89,7 +89,6 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             }
         }
 
-        setHasOptionsMenu(true)
         return binding.root
     }
 
@@ -106,10 +105,5 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
     private fun showLoginFailed(@StringRes errorString: Int) {
         toast(errorString)
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
-        menu.clear()
     }
 }

@@ -27,19 +27,8 @@ class MainActivity : AppCompatActivity() {
         Timber.plant(Timber.DebugTree())
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu, menu)
-        return true
-    }
-
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)
         return NavigationUI.navigateUp(navController, appBarConfiguration)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment)
-        return NavigationUI.onNavDestinationSelected(item,navController)
-                || super.onOptionsItemSelected(item)
     }
 }
