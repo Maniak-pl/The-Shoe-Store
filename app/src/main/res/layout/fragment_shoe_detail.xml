@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout style="@style/Match">
 
@@ -28,6 +33,7 @@
             android:id="@+id/nameInput"
             style="@style/EmptyWrap"
             android:maxLength="20"
+            android:text="@={shoe.name}"
             app:layout_constraintEnd_toEndOf="@id/right"
             app:layout_constraintStart_toStartOf="@id/left"
             app:layout_constraintTop_toBottomOf="@id/name" />
@@ -44,6 +50,7 @@
             android:id="@+id/companyInput"
             style="@style/EmptyWrap"
             android:maxLength="20"
+            android:text="@={shoe.company}"
             app:layout_constraintEnd_toEndOf="@id/right"
             app:layout_constraintStart_toStartOf="@id/left"
             app:layout_constraintTop_toBottomOf="@id/company" />
@@ -64,7 +71,7 @@
             app:layout_constraintEnd_toEndOf="@id/right"
             app:layout_constraintStart_toStartOf="@id/left"
             app:layout_constraintTop_toBottomOf="@id/size" />
-
+        <!--            android:text="@={Double.parseDouble(shoe.size), @{ }"-->
         <TextView
             android:id="@+id/description"
             style="@style/ShoeLabel"
@@ -76,6 +83,7 @@
         <EditText
             android:id="@+id/descriptionInput"
             style="@style/EmptyWrap"
+            android:text="@={shoe.description}"
             app:layout_constraintEnd_toEndOf="@id/right"
             app:layout_constraintStart_toStartOf="@id/left"
             app:layout_constraintTop_toBottomOf="@id/description" />
