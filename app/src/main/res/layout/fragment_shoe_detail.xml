@@ -2,6 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
+        <import type="com.udacity.shoestore.util.Converter"/>
         <variable
             name="shoe"
             type="com.udacity.shoestore.models.Shoe" />
@@ -68,6 +69,7 @@
             style="@style/EmptyWrap"
             android:inputType="numberDecimal"
             android:maxLength="3"
+            android:text="@={Converter.doubleToString(shoe.size)}"
             app:layout_constraintEnd_toEndOf="@id/right"
             app:layout_constraintStart_toStartOf="@id/left"
             app:layout_constraintTop_toBottomOf="@id/size" />
