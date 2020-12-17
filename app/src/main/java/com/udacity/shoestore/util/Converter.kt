@@ -9,7 +9,7 @@ object Converter {
     fun doubleToString(
         value: Double
     ): String {
-        return value.toString()
+        return if (value > 0) value.toString() else ""
     }
 
     @JvmStatic
