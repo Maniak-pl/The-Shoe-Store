@@ -2,6 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- Layout does not require a complicated arrangement of elements. The view is only a simple hierarchy, so I'm using LinearLayout-->
     <LinearLayout style="@style/OnboardingLayout">
 
         <TextView

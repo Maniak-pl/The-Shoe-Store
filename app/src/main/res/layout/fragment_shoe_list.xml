@@ -2,6 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+<!--    The layout requires me to place the button above the other views. That's why I'm using ConstraintLayout.-->
     <androidx.constraintlayout.widget.ConstraintLayout style="@style/Match">
 
         <include layout="@layout/guideline" />

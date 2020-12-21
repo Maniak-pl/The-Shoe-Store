@@ -8,6 +8,7 @@
             type="com.udacity.shoestore.models.Shoe" />
     </data>
 
+<!--    The screen requires a more complicated view layout from me. Especially buttons that do not want to be placed in the nested LinearLayout based on weights. That's why I'm using ConstraintLayout.-->
     <androidx.constraintlayout.widget.ConstraintLayout style="@style/Match">
 
         <include layout="@layout/guideline" />

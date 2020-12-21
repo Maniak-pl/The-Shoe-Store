@@ -7,6 +7,7 @@
             type="com.udacity.shoestore.models.Shoe" />
     </data>
 
+<!--    To better adjust the view and flatten the hierarchy, I choose ConstraintLayout. Especially since these are elements of the list, and we do not know what hierarchy may be under them.-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
